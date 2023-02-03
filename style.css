@@ -14,12 +14,19 @@ nav {
     width:100%;
 }
 
+footer {
+    width:100%;
+    height:25vh;
+    margin-top:15vh;
+    background-color: #3B3539;
+}
+
 .nav-1 {
     display:flex;
 }
 
 nav img {
-    height:80px;
+    height:6em;
     padding:15px;
 }
 
@@ -35,8 +42,18 @@ nav h1 {
     padding-top: 25px;
 }
 
-.flex-1,  {
+.flex-1  {
     display:flex;
+}
+
+input {
+    background-color: #E0E0E0;
+    border-radius:20px;
+    height:4vh;
+    font-family: 'Varela', sans-serif;
+    width:40%;
+    margin-left:30px;
+    font-size: large;
 }
 
 .hero {
@@ -63,10 +80,16 @@ nav h1 {
     width:90%;
 }
 
-.flex-3 {
+
+.flex-3, .flex-4 {
     display:flex;
     justify-content: center;
     flex-direction: row;
+    margin-bottom:12vh;
+}
+
+#four {
+    display:flex;
 }
 
 .text-1 {
@@ -78,25 +101,142 @@ nav h1 {
     margin-bottom: 3em;
 }
 
-#top-box-1 {
-    height:300px;
+.top-box {
+    height:400px;
     position: absolute;
-    margin-left:100px;
-    margin-right:100px;
-    width:85%;
+    /* margin-left:100px;
+    margin-right:100px; */
+    width:50%;
+    border-radius:20px;
     align-items: center;
-    background-image: url(img/img-2.jpeg);
+   
     background-size:contain;
     background-attachment: fixed;
     box-shadow: 2px 2px 4px rgb(144, 144, 144);
 } 
 
+#one {
+    background-image: url(img/img-3.jpg);
+}
+
+#two {
+    background-image: url(img/img-3.jpg);
+
+}
+
+#three {
+    background-image: url(img/img-4jpg);
+}
+
+#four {
+    background-image: url(img/img-5.jpg);
+}
+
+#five {
+    background-image: url(img/img-6.jpg);
+}
+
+#six {
+    background-image: url(img/img-7.jpg);
+}
+
 #box-1 {
     position: relative;
     width: 65%;
+    margin-top: 200px;
     /* display:flex; */
     height:500px;
     background: #57514F;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+    margin-bottom:12vh;
     }
+
+#box-3 {
+    color:white;
+}
+
+/* #box-3 h2 :first-child {
+    margin-top: 200px;
+} */
+
+/* #top-box-2 {
+    height:400px;
+    position: absolute;
+    /* margin-left:100px;
+    margin-right:100px; 
+    width:50%;
+    border-radius:20px;
+    align-items: center;
+    background-image: url(img/img-4.jpg);
+    background-size:contain;
+    background-attachment: fixed;
+    box-shadow: 2px 2px 4px rgb(144, 144, 144);
+    }  */
+
+#box-2 {
+    position: relative;
+    width: 65%;
+    margin-top: 200px;
+    /* display:flex; */
+    height:600px;
+    background-color: #835652;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    }
+    
+
+#box-1 h2 {
+    color:white;
+    padding:30px;
+    margin-top:200px;
+}
+
+
+#top-box-3 {
+    height:400px;
+    position: absolute;
+    /* margin-left:100px;
+    margin-right:100px; */
+    width:50%;
+    border-radius:20px;
+    align-items: center;
+    background-image: url(img/img-5.jpg);
+    background-size:contain;
+    background-attachment: fixed;
+    box-shadow: 2px 2px 4px rgb(144, 144, 144);
+    } 
+
+#box-3 {
+    position: relative;
+    width: 65%;
+    margin-top: 200px;
+    /* display:flex; */
+    height:600px;
+    background: #57514F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    }
+    
+.footer-1, .footer-2 {
+    display:flex;
+    width:50%;
+}
+
+footer img {
+    height:15em;
+    padding-left:65px;
+    padding-top:65px;
+}
+
+footer h2 {
+    font-family: 'Unica One', cursive;
+}
+
+.class-25 {
+    width:25%;
+    flex-direction: column;
+}
+
+    /* <h2>Gross Annual Income</h2>
+        <h2>Gross Monthly Income</h2> */
