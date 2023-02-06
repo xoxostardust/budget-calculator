@@ -58,46 +58,93 @@
     <div id="box-4">
         <h2>Pay Period Deductions</h2>
         <div class="deduct-details" id="light">
-            <h3>12% x 0.12</h3>
-            <p>Federal Taxes</p>
+            <div class="mini-flex">
+                <h3>Federal Taxes</h3>
+                <h3>12% x 0.12</h3>
             <div class="PP"></div>
         </div>
-        <div class="deduct-details" id="dark">
-            <h3>7% x 0.07</h3>
-            <p>State Taxes</p>
-        </div>
-        <div class="deduct-details" id="light">
-            <h3>6.2% x 0.062</h3>
-            <p>Social Security</p>
         </div>
         <div class="deduct-details" id="dark">
-            <h3>1.45% x 0.0145</h3>
-            <p>Medicare</p>
+            <div class="mini-flex">
+                <h3>State Taxes</h3>
+                <h3>7% x 0.07</h3>
+            <div class="PP"></div>
+        </div>
         </div>
         <div class="deduct-details" id="light">
-            <h3>1% x 0.01</h3>
-            <p>State Disability</p>
+            <div class="mini-flex">
+                <h3>Social Security</h3>
+                <h3>6.2% x 0.062</h3>
+            <div class="PP"></div>
+        </div>
         </div>
         <div class="deduct-details" id="dark">
-            <h3>5% x 0.05</h3>
-            <p>Retirement Investment</p>
+            <div class="mini-flex">
+                <h3>Medicare</h3>
+                <h3>1.45% x 0.0145</h3>
+            <div class="PP"></div>
+        </div>
         </div>
         <div class="deduct-details" id="light">
+            <div class="mini-flex">
+                <h3>State Disability</h3>
+                <h3>1% x 0.01</h3>
+            <div class="PP"></div>
+        </div>
+        </div>
+        <div class="deduct-details" id="dark">
+            <div class="mini-flex">
+                <h3>Retirement Investment</h3>
+                <h3>5% x 0.05</h3>
+            <div class="PP"></div>
+        </div>
+        </div>
+        <div class="deduct-details" id="light">
+            <div class="mini-flex">
+            <h3>Medical Insurance</h3>
             <h3>$180.00</h3>
-            <p>Medical Insurance</p>
+            <div class="PP"></div>
         </div>
+        </div>
+        <h2>Total Deductions</h2>
+        <div class="final-PP"></div>
     </div>
     <div class="top-box" id="five"> </div>
 </div>
 
 <div class="flex-3">
-    <div id="box-3">
+    <div class="box-3-details" id="box-3">
+            <h2>Net Monthly Income</h2>
+            <input type="GA" id ="GA-1">
+            <br>
+            <div class="testing">
+            <h2>Gross Monthly Income</h2>
+            <div class="box"></div>
+            <h2>-</h2>
+            <h2>Total Deductions</h2>
+            <div class="box"></div>
+        </div>
     </div>
     <div class="top-box" id="six"> </div>
 </div>
 
 <div class="flex-3">
     <div id="box-1">
+        <h2>Check Register</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Payment, Deposit, Fee</th>
+                <th>Balance</th>
+            </tr>
+            <tr>
+                <input type="date" id ="date">
+                <input type="description" id ="description">
+                <input type="pdf" id ="pdf">
+                <input type="balance" id ="balance">
+            </tr>
+        </table>
     </div>
     <div class="top-box" id="seven"> </div>
 </div>
