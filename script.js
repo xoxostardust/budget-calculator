@@ -70,7 +70,7 @@ const data = [
     [ 'Welder/Metal Specialist', 47250 ],
     [ 'Wind EnergyTechnician', 56700 ]
 ]
-
+let JobInput = document.getElementById("jobinput");
 let JobList = document.getElementById('career');
 for(job of data){
     let option = document.createElement('option');
@@ -81,13 +81,91 @@ for(job of data){
     JobList.appendChild(option);
 }
 
-// const career = document.getElementById('career');
-// const GT = document.getElementById('GT-1');
+JobInput.addEventListener("change", (e) => findSalary());
+let Salary = 0;
+function findSalary() {
+    DesiredJob = JobInput.value;
+    for(job of data){
+        if (job[0]==DesiredJob) {
+            Salary=job[1];
+        }
+    }
+    SetAnnualIncome()
+    SetMonthlyIncome()
+    SetFederalTaxes()
+    SetStateTaxes()
+    SetSocialSecurity()
+    SetMedicare()
+    SetStateDisability()
+    SetRetirementInvestment()
+    SetMedicalInsurance()
+    SetTotalDeductions()
+}
 
-// function out1() {
-//     GT.innerHTML = career.value;
+// let MonthlyIncome = Salary/12
+
+// GA.addEventListener("change", (c) => findFederalTaxes());
+// let FederalTaxes = 0;
+// function findFederalTaxes() {
+//     if ()
 // }
 
-// career.addEventListener('click', out1)
-// its 7 pm but i am too tired to do this help
+// finds the gross annual income for that job
+let AnnualIncome = document.getElementById("GA-1");
+function SetAnnualIncome(){
+    AnnualIncome.value = "$"+Salary;
+}
 
+// calculates the gross monthly income for that job
+let MonthlyIncome = document.getElementById("GM");
+function SetMonthlyIncome(){
+    MonthlyIncome.value = "$"+Salary/12;
+}
+
+
+// calculates the federal tax amount per month
+let FederalTaxes = document.getElementById("FT");
+function SetFederalTaxes(){
+    FederalTaxes.value= "$"+Salary/12*0.12
+}
+
+// calculates the state tax amount per month
+let StateTaxes = document.getElementById("ST");
+function SetStateTaxes(){
+    StateTaxes.value= "$"+Salary/12*0.07
+}
+
+// calculates the social security amount per month
+let SocialSecurity = document.getElementById("SS");
+function SetSocialSecurity(){
+    SocialSecurity.value= "$"+Salary/12*0.062
+}
+
+// calculates the medicare amount per month
+let Medicare = document.getElementById("MED");
+function SetMedicare(){
+    Medicare.value= "$"+Salary/12*0.0145
+}
+
+// calculates the state disability amount per month
+let StateDisability = document.getElementById("SD");
+function SetStateDisability(){
+    StateDisability.value= "$"+Salary/12*0.01
+}
+
+// calculates the retirement investment per month
+let RetirementInvestment = document.getElementById("RI");
+function SetRetirementInvestment(){
+    RetirementInvestment.value= "$"+Salary/12*0.05
+}
+
+// calculates the med insurance amount per month
+let MedicalInsurance = document.getElementById("MI");
+function SetMedicalInsurance(){
+    MedicalInsurance.value= "$"+180.00
+}
+
+let TotalDeductions = document.getElementById("TD");
+function SetTotalDeductions(){
+    TotalDeductions.value = "$"+ Number(FederalTaxes) + Number(StateTaxes)
+}

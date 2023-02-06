@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unica+One&family=Varela&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unica+One&family=Varela&display=swap" rel="stylesheet">
     <title>Careers In Calculation</title>
 </head>
 <body>
@@ -33,7 +37,9 @@
 </div>
 <div class="flex-3">
     <div id="box-1">
+        <div id="h2-margin">
         <h2>What is your desired occupation?</h2>
+        </div>
         <label for="career"></label>
         <input list="career" id="jobinput">
         <datalist name="career" id="career">
@@ -44,12 +50,14 @@
 
 <div class="flex-3">
     <div id="box-3">
+        <div id="h2-margin">
         <h2>Gross Annual Income</h2>
-        <input type="GA" id ="GA-1">
+        </div>
+        <input type="GA" id ="GA-1" disabled>
         <br>
         <h2>Gross Monthly Income</h2>
         <p>Gross Annual Income divided by 12</p>
-        <div class="box"></div>
+        <input type="GM" class="box" id="GM" disabled>
     </div>
     <div class="top-box" id="four"> </div>
 </div>
@@ -61,60 +69,62 @@
             <div class="mini-flex">
                 <h3>Federal Taxes</h3>
                 <h3>12% x 0.12</h3>
-            <div class="PP"></div>
+                <input type="GM" class="PP" id="FT" disabled>
         </div>
         </div>
         <div class="deduct-details" id="dark">
             <div class="mini-flex">
                 <h3>State Taxes</h3>
                 <h3>7% x 0.07</h3>
-            <div class="PP"></div>
+                <input type="GM" class="PP" id="ST" disabled>
         </div>
         </div>
         <div class="deduct-details" id="light">
             <div class="mini-flex">
                 <h3>Social Security</h3>
                 <h3>6.2% x 0.062</h3>
-            <div class="PP"></div>
+                <input type="GM" class="PP" id="SS" disabled>
         </div>
         </div>
         <div class="deduct-details" id="dark">
             <div class="mini-flex">
                 <h3>Medicare</h3>
                 <h3>1.45% x 0.0145</h3>
-            <div class="PP"></div>
+                <input type="GM" class="PP" id="MED" disabled>
         </div>
         </div>
         <div class="deduct-details" id="light">
             <div class="mini-flex">
                 <h3>State Disability</h3>
                 <h3>1% x 0.01</h3>
-            <div class="PP"></div>
+                <input type="GM" class="PP" id="SD" disabled>
         </div>
         </div>
         <div class="deduct-details" id="dark">
             <div class="mini-flex">
                 <h3>Retirement Investment</h3>
                 <h3>5% x 0.05</h3>
-            <div class="PP"></div>
+                <input type="GM" class="PP" id="RI" disabled>
         </div>
         </div>
         <div class="deduct-details" id="light">
             <div class="mini-flex">
             <h3>Medical Insurance</h3>
             <h3>$180.00</h3>
-            <div class="PP"></div>
+            <input type="GM" class="PP" id="MI" disabled>
         </div>
         </div>
         <h2>Total Deductions</h2>
-        <div class="final-PP"></div>
+        <input type="GM" class="final-PP" id="TD" disabled>
     </div>
     <div class="top-box" id="five"> </div>
 </div>
 
 <div class="flex-3">
     <div class="box-3-details" id="box-3">
+        <div id="h2-margin">
             <h2>Net Monthly Income</h2>
+        </div>
             <input type="GA" id ="GA-1">
             <br>
             <div class="testing">
@@ -130,7 +140,9 @@
 
 <div class="flex-3">
     <div id="box-1">
+        <div id="h2-margin">
         <h2>Check Register</h2>
+        </div>
         <table class="check">
             <tr>
                 <th>Date</th>
@@ -221,12 +233,12 @@
         <div class="class-50-2">
         <h2>Careers In Calculation</h2>
     </div>
-        <p>2555 Clovis Ave, Clovis, CA 93612
-            (559)-248-7400</p>
+        <p> <br> 2555 Clovis Ave, Clovis, CA 93612</p>
+        <p>(559)-248-7400</p>
     </div>
     <div class="footer-2">
-        <p>Income Calculator
-            Check Register Calculator <br> Our mission at Careers in Calculation is to empower young people to make informed financial decisions by providing comprehensive education and practical tools. We strive to instill financial literacy and understanding of personal finance through interactive income and checkbook calculators. Our goal is to equip the next generation with the skills and knowledge necessary to achieve financial stability and success in their careers.</p>
+        <p>Income Calculator <br>
+            Check Register Calculator <br> <br> Our mission at Careers in Calculation is to empower young people to make informed financial decisions by providing comprehensive education and practical tools. We strive to instill financial literacy and understanding of personal finance through interactive income and checkbook calculators. Our goal is to equip the next generation with the skills and knowledge necessary to achieve financial stability and success in their careers.</p>
     </div>
 </footer>
 <script src="script.js"></script>
