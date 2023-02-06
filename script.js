@@ -80,3 +80,14 @@ for(job of data){
 
     JobList.appendChild(option);
 }
+
+// const career = document.getElementById('career');
+// const GT = document.getElementById('GT-1');
+
+// function out1() {
+//     GT.innerHTML = career.value;
+// }
+
+// career.addEventListener('click', out1)
+// its 7 pm but i am too tired to do this help
+
