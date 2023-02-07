@@ -94,6 +94,7 @@ function findSalary() {
     }
     SetAnnualIncome()
     SetMonthlyIncome()
+    SetMonthlyIncome1()
     SetFederalTaxes()
     SetStateTaxes()
     SetSocialSecurity()
@@ -102,6 +103,7 @@ function findSalary() {
     SetRetirementInvestment()
     SetMedicalInsurance()
     SetTotalDeductions()
+    SetTotalDeductions1()
     SetNetMonthly()
 }
 
@@ -140,6 +142,11 @@ function SetMonthlyIncome(){
     GMI = Math.round(Salary/12);
     currentBalance = GMI;
     MonthlyIncome.value = "$"+ GMI;
+}
+
+let MonthlyIncome1 = document.getElementById("GM-1");
+function SetMonthlyIncome1(){
+    MonthlyIncome1.value = MonthlyIncome.value;
 }
 
 
@@ -201,6 +208,11 @@ function SetTotalDeductions() {
     // document.getElementById("TD").value = sum;
     sum = GMI - currentBalance;
     TotalDeductions.value = "$" + sum;
+}
+
+let TotalDeductions1 = document.getElementById("TD-1");
+function SetTotalDeductions1() {
+    TotalDeductions1.value = TotalDeductions.value;
 }
 
 let NetMonthly = document.getElementById("NMI");
