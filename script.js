@@ -119,44 +119,44 @@ function SetAnnualIncome(){
 // calculates the gross monthly income for that job
 let MonthlyIncome = document.getElementById("GM");
 function SetMonthlyIncome(){
-    MonthlyIncome.value = "$"+Salary/12;
+    MonthlyIncome.value = "$"+Math.round(Salary/12);
 }
 
 
 // calculates the federal tax amount per month
 let FederalTaxes = document.getElementById("FT");
 function SetFederalTaxes(){
-    FederalTaxes.value= "$"+Salary/12*0.12
+    FederalTaxes.value= "$"+Math.round(Salary/12*0.12);
 }
 
 // calculates the state tax amount per month
 let StateTaxes = document.getElementById("ST");
 function SetStateTaxes(){
-    StateTaxes.value= "$"+Salary/12*0.07
+    StateTaxes.value= "$"+Math.round(Salary/12*0.07);
 }
 
 // calculates the social security amount per month
 let SocialSecurity = document.getElementById("SS");
 function SetSocialSecurity(){
-    SocialSecurity.value= "$"+Salary/12*0.062
+    SocialSecurity.value= "$"+Math.round(Salary/12*0.062);
 }
 
 // calculates the medicare amount per month
 let Medicare = document.getElementById("MED");
 function SetMedicare(){
-    Medicare.value= "$"+Salary/12*0.0145
+    Medicare.value= "$"+Math.round(Salary/12*0.0145);
 }
 
 // calculates the state disability amount per month
 let StateDisability = document.getElementById("SD");
 function SetStateDisability(){
-    StateDisability.value= "$"+Salary/12*0.01
+    StateDisability.value= "$"+Math.round(Salary/12*0.01);
 }
 
 // calculates the retirement investment per month
 let RetirementInvestment = document.getElementById("RI");
 function SetRetirementInvestment(){
-    RetirementInvestment.value= "$"+Salary/12*0.05
+    RetirementInvestment.value= "$"+Math.round(Salary/12*0.05);
 }
 
 // calculates the med insurance amount per month
@@ -165,7 +165,28 @@ function SetMedicalInsurance(){
     MedicalInsurance.value= "$"+180.00
 }
 
+// let TotalDeductions = document.getElementById("TD");
+// function SetTotalDeductions(){
+//     TotalDeductions.value = "$"+ Number(FederalTaxes) + Number(StateTaxes)
+// }
+
+
+//calculate total deductions help :( 
 let TotalDeductions = document.getElementById("TD");
-function SetTotalDeductions(){
-    TotalDeductions.value = "$"+ Number(FederalTaxes) + Number(StateTaxes)
+function SetTotalDeductions() {
+    // let StateTaxes, FederalTaxes, sum;
+    let StateTaxes = (document.getElementById("ST").value);
+    let FederalTaxes = (document.getElementById("FT").value);
+    sum = StateTaxes + FederalTaxes;
+    // document.getElementById("TD").value = sum;
+    TotalDeductions.value = "$" + sum;
 }
+
+
+
+
+//     let a = document.getElementById("FT").value;
+//     let b = document.getElementById("ST").value;
+//     // let c = +a + +b;
+//     TotalDeductions.value = Number(a) + Number(b);
+// }
