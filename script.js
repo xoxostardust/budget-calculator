@@ -46,6 +46,7 @@ const data = [
     [ 'Marketing/Sales Manager', 58800 ],
     [ 'Media/Communications', 45150 ],
     [ 'Medical RepairTech.', 52500 ],
+    [ 'Mr. Fast', 67000 ],
     [ 'Military', 55650 ],
     [ 'Nurse', 66150 ],
     [ 'Nutitionist', 45150 ],
@@ -70,6 +71,7 @@ const data = [
     [ 'Welder/Metal Specialist', 47250 ],
     [ 'Wind EnergyTechnician', 56700 ]
 ]
+
 let JobInput = document.getElementById("jobinput");
 let JobList = document.getElementById('career');
 for(job of data){
@@ -100,88 +102,112 @@ function findSalary() {
     SetRetirementInvestment()
     SetMedicalInsurance()
     SetTotalDeductions()
+    SetNetMonthly()
 }
 
-// let MonthlyIncome = Salary/12
-
-// GA.addEventListener("change", (c) => findFederalTaxes());
-// let FederalTaxes = 0;
-// function findFederalTaxes() {
-//     if ()
-// }
-
-// finds the gross annual income for that job
+//finds the gross annual income for that job
 let AnnualIncome = document.getElementById("GA-1");
 function SetAnnualIncome(){
     AnnualIncome.value = "$"+Salary;
 }
 
+let GMI = 0;
+let currentBalance = 0;
+
+// let FederalTaxes.value = MonthlyIncome;
+// GMI = GAI/12;
+
+// let // add housing affotrd
+
+
+// let MED = MonthlyIncome * 0.0145; //medicare;
+
+
+
+
+
+
+
+
+
+
+
+
+
 // calculates the gross monthly income for that job
 let MonthlyIncome = document.getElementById("GM");
 function SetMonthlyIncome(){
-    MonthlyIncome.value = "$"+Math.round(Salary/12);
+    GMI = Math.round(Salary/12);
+    currentBalance = GMI;
+    MonthlyIncome.value = "$"+ GMI;
 }
 
 
 // calculates the federal tax amount per month
 let FederalTaxes = document.getElementById("FT");
 function SetFederalTaxes(){
-    FederalTaxes.value= "$"+Math.round(Salary/12*0.12);
+    FederalTaxes.value= "$"+Math.round(GMI*0.12);
+    currentBalance -= Math.round(GMI*0.12);
 }
 
 // calculates the state tax amount per month
 let StateTaxes = document.getElementById("ST");
 function SetStateTaxes(){
-    StateTaxes.value= "$"+Math.round(Salary/12*0.07);
+    StateTaxes.value= "$"+Math.round(GMI*0.07);
+    currentBalance -= Math.round(GMI*0.07);
 }
 
 // calculates the social security amount per month
 let SocialSecurity = document.getElementById("SS");
 function SetSocialSecurity(){
-    SocialSecurity.value= "$"+Math.round(Salary/12*0.062);
+    SocialSecurity.value= "$"+Math.round(GMI*0.062);
+    currentBalance -= Math.round(GMI*0.062);
 }
 
 // calculates the medicare amount per month
 let Medicare = document.getElementById("MED");
 function SetMedicare(){
-    Medicare.value= "$"+Math.round(Salary/12*0.0145);
+    Medicare.value= "$"+Math.round(GMI*0.0145);
+    currentBalance -= Math.round(GMI*0.0145);
 }
 
 // calculates the state disability amount per month
 let StateDisability = document.getElementById("SD");
 function SetStateDisability(){
-    StateDisability.value= "$"+Math.round(Salary/12*0.01);
+    StateDisability.value= "$"+Math.round(GMI*0.01);
+    currentBalance -= Math.round(GMI*0.01);
 }
 
 // calculates the retirement investment per month
 let RetirementInvestment = document.getElementById("RI");
 function SetRetirementInvestment(){
-    RetirementInvestment.value= "$"+Math.round(Salary/12*0.05);
+    RetirementInvestment.value= "$"+Math.round(GMI*0.05);
+    currentBalance -= Math.round(GMI*0.05);
 }
 
 // calculates the med insurance amount per month
 let MedicalInsurance = document.getElementById("MI");
 function SetMedicalInsurance(){
-    MedicalInsurance.value= "$"+180.00
+    MedicalInsurance.value= "$"+180.00;
+    currentBalance -= 180.00;
 }
-
-// let TotalDeductions = document.getElementById("TD");
-// function SetTotalDeductions(){
-//     TotalDeductions.value = "$"+ Number(FederalTaxes) + Number(StateTaxes)
-// }
-
 
 //calculate total deductions help :( 
 let TotalDeductions = document.getElementById("TD");
 function SetTotalDeductions() {
     // let StateTaxes, FederalTaxes, sum;
-    let StateTaxes = (document.getElementById("ST").value);
-    let FederalTaxes = (document.getElementById("FT").value);
-    sum = StateTaxes + FederalTaxes;
+    // let StateTaxes = parseInt((document.getElementById("ST").value));
+    // let FederalTaxes = parseInt((document.getElementById("FT").value));
     // document.getElementById("TD").value = sum;
+    sum = GMI - currentBalance;
     TotalDeductions.value = "$" + sum;
 }
 
+let NetMonthly = document.getElementById("NMI");
+function SetNetMonthly() {
+    currentBalance - TotalDeductions.value;
+    NetMonthly.value = "$" + currentBalance;
+}
 
 
 
@@ -189,4 +215,15 @@ function SetTotalDeductions() {
 //     let b = document.getElementById("ST").value;
 //     // let c = +a + +b;
 //     TotalDeductions.value = Number(a) + Number(b);
+// }
+
+// let TotalDeductions = document.getElementById("TD");
+// function SetTotalDeductions(){
+//     TotalDeductions.value = "$"+ Number(FederalTaxes) + Number(StateTaxes)
+// }
+
+// let TotalDeductions = document.getElementById("TD");
+// function SetTotalDeductions() {
+//     let TotalDeductions = FederalTaxes + StateTaxes;
+//     TotalDeductions.innerText = "$" + TotalDeductions.toFixed(2);
 // }
