@@ -105,6 +105,8 @@ function findSalary() {
     SetTotalDeductions()
     SetTotalDeductions1()
     SetNetMonthly()
+    SetMonthlyIncome2()
+    SetHousePayment()
 }
 
 //finds the gross annual income for that job
@@ -147,6 +149,16 @@ function SetMonthlyIncome(){
 let MonthlyIncome1 = document.getElementById("GM-1");
 function SetMonthlyIncome1(){
     MonthlyIncome1.value = MonthlyIncome.value;
+}
+
+let MonthlyIncome2 = document.getElementById("GM-2");
+function SetMonthlyIncome2(){
+    MonthlyIncome2.value = MonthlyIncome.value;
+}
+
+let HousePayment = document.getElementById("HP");
+function SetHousePayment(){
+    HousePayment.value = "$" + Math.round(GMI*0.33);
 }
 
 
@@ -239,3 +251,11 @@ function SetNetMonthly() {
 //     let TotalDeductions = FederalTaxes + StateTaxes;
 //     TotalDeductions.innerText = "$" + TotalDeductions.toFixed(2);
 // }
+
+
+// PDF.addEventListener("change", (d) => findBalance());
+// let currentBalance = GMI;
+// function findBalance() {
+//     currentBalance = GMI - PDF.value;
+//     Balance = "$" + currentBalance;
+//     }

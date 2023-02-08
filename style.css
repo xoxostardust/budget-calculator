@@ -243,6 +243,10 @@ td, th {
     background-image: url(img/img-8.jpg);
 }
 
+#eight {
+    background-image:url(img/img-9.jpg);
+}
+
 #box-1 {
     position: relative;
     width: 65%;
@@ -369,6 +373,11 @@ td, th {
 footer h2 {
     font-family: 'Unica One', cursive;
     }
+
+footer a {
+    text-decoration: none;
+    color:white;
+}
 
 footer {
     width:100%;
