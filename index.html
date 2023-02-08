@@ -18,7 +18,9 @@
     <nav>
         <div class="class nav-1">
             <div class="nav-section-1">
-        <img src="img/logo.png" href="index.html">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="logo with a brief case and person silhouette inside">
+                </a>
             </div>
             <div class="nav-section-2">
         <h1>Careers In Calculation</h1>
@@ -37,110 +39,136 @@
 </div>
 <div class="flex-3">
     <div id="box-1">
-        <div id="h2-margin">
+        <div class="h2-margin">
         <h2>What is your desired occupation?</h2>
+        <div class="info-flex">
+        <i class="information-button">
+            <img src="img/info-button-real.png" alt="white circle with i inside">
+            <span class="info-content">Can't find your future job? Suggest it <a href="https://forms.gle/TFEssj9uVb5tZ3fS9">here.</a></span>
+        </i>
+    </div>
         </div>
         <label for="career"></label>
         <input list="career" id="jobinput">
-        <datalist name="career" id="career">
+        <!-- FIX THIS ERROR !!!!!! -->
+        <datalist id="career">
         </datalist>
     </div>
     <div class="top-box" id="one"> </div>
 </div>
 
-<div class="flex-3">
+<div class="flex-3" id="incomefirst">
     <div id="box-3">
-        <div id="h2-margin">
+        <div class="h2-margin">
         <h2>Gross Annual Income</h2>
+        <i class="information-button">
+            <img src="img/info-button-real.png" alt="white circle with i inside">
+            <span class="info-content">The total amount of one's earnings per year before any tax, insurance, or other deductions.</span>
+        </i>
         </div>
-        <input type="GA" id ="GA-1" disabled>
+        <input id ="GA-1" disabled>
         <br>
+        <div class="info-flex">
         <h2>Gross Monthly Income</h2>
-        <p>Gross Annual Income divided by 12</p>
-        <input type="GM" class="box" id="GM" disabled>
+        <i class="information-button">
+            <img src="img/info-button-real.png" alt="button with i inside">
+            <span class="info-content">The Gross Annual Income divided by 12 to find one's monthly pay.</span>
+        </i>
+    </div>
+        <input class="box" id="GM" disabled>
     </div>
     <div class="top-box" id="four"> </div>
 </div>
 
 <div class="flex-3">
     <div id="box-4">
+        <div class="info-flex">
         <h2>Pay Period Deductions</h2>
+        <i class="information-button" id="PD">
+            <img src="img/info-button-real.png" alt="button with i inside">
+            <span class="info-content">Wages that are withheld from one's earnings for the pay period due to taxes, insurance, etc.</span>
+        </i>
+    </div>
         <div class="deduct-details" id="light">
             <div class="mini-flex">
                 <h3>Federal Taxes</h3>
                 <h3>12% x 0.12</h3>
-                <input type="GM" class="PP" id="FT" disabled>
+                <input class="PP" id="FT" disabled>
         </div>
         </div>
         <div class="deduct-details" id="dark">
             <div class="mini-flex">
                 <h3>State Taxes</h3>
                 <h3>7% x 0.07</h3>
-                <input type="GM" class="PP" id="ST" disabled>
+                <input class="PP" id="ST" disabled>
         </div>
         </div>
-        <div class="deduct-details" id="light">
+        <div class="deduct-details" id="light-1">
             <div class="mini-flex">
                 <h3>Social Security</h3>
                 <h3>6.2% x 0.062</h3>
-                <input type="GM" class="PP" id="SS" disabled>
+                <input class="PP" id="SS" disabled>
         </div>
         </div>
-        <div class="deduct-details" id="dark">
+        <div class="deduct-details" id="dark-1">
             <div class="mini-flex">
                 <h3>Medicare</h3>
                 <h3>1.45% x 0.0145</h3>
-                <input type="GM" class="PP" id="MED" disabled>
+                <input class="PP" id="MED" disabled>
         </div>
         </div>
-        <div class="deduct-details" id="light">
+        <div class="deduct-details" id="light-2">
             <div class="mini-flex">
                 <h3>State Disability</h3>
                 <h3>1% x 0.01</h3>
-                <input type="GM" class="PP" id="SD" disabled>
+                <input class="PP" id="SD" disabled>
         </div>
         </div>
-        <div class="deduct-details" id="dark">
+        <div class="deduct-details" id="dark-2">
             <div class="mini-flex">
                 <h3>Retirement Investment</h3>
                 <h3>5% x 0.05</h3>
-                <input type="GM" class="PP" id="RI" disabled>
+                <input class="PP" id="RI" disabled>
         </div>
         </div>
-        <div class="deduct-details" id="light">
+        <div class="deduct-details" id="light-3">
             <div class="mini-flex">
             <h3>Medical Insurance</h3>
             <h3>$180.00</h3>
-            <input type="GM" class="PP" id="MI" disabled>
+            <input class="PP" id="MI" disabled>
         </div>
         </div>
         <h2>Total Deductions</h2>
-        <input type="GM" class="final-PP" id="TD" disabled>
+        <input class="final-PP" id="TD" disabled>
     </div>
     <div class="top-box" id="five"> </div>
 </div>
 
 <div class="flex-3">
-    <div class="box-3-details" id="box-3">
-        <div id="h2-margin">
+    <div class="box-3-details" id="boxx-3">
+        <div class="h2-margin">
             <h2>Net Monthly Income</h2>
-        </div>
-            <input type="GA" id ="NMI" disabled>
+            <i class="information-button">
+                <img src="img/info-button-real.png" alt="button with i inside">
+                <span class="info-content">One's total income for the month when all tax, insurance, and other deductions are made.</span>
+                </i>
+            </div>
+            <input id ="NMI" disabled>
             <br>
             <div class="testing">
             <h2>Gross Monthly Income</h2>
-            <input type="GM" class="box" id="GM-1" disabled>
+            <input class="box" id="GM-1" disabled>
             <h2>-</h2>
             <h2>Total Deductions</h2>
-            <input type="GM" class="box" id="TD-1" disabled>
+            <input class="box" id="TD-1" disabled>
         </div>
     </div>
     <div class="top-box" id="six"> </div>
 </div>
 
-<div class="flex-3">
-    <div id="box-1">
-        <div id="h2-margin">
+<div class="flex-3" id="checkfirst">
+    <div id="boxx-1">
+        <div class="h2-margin">
         <h2>Check Register</h2>
         </div>
         <table class="check">
@@ -157,55 +185,55 @@
                 <input type="balance" id ="balance">
             </tr>
             <tr class="register">
-                <input type="date" id ="date">
+                <input type="date" id ="date-1">
                 <input type="description" id ="description">
                 <input type="pdf" id ="pdf">
                 <input type="balance" id ="balance">
             </tr>
             <tr class="register">
-                <input type="date" id ="date">
+                <input type="date" id ="date-2">
                 <input type="description" id ="description">
                 <input type="pdf" id ="pdf">
                 <input type="balance" id ="balance">
             </tr>
             <tr class="register">
-                <input type="date" id ="date">
+                <input type="date" id ="date-3">
                 <input type="description" id ="description">
                 <input type="pdf" id ="pdf">
                 <input type="balance" id ="balance">
             </tr>
             <tr class="register">
-                <input type="date" id ="date">
+                <input type="date" id ="date-4">
                 <input type="description" id ="description">
                 <input type="pdf" id ="pdf">
                 <input type="balance" id ="balance">
             </tr>
             <tr class="register">
-                <input type="date" id ="date">
+                <input type="date" id ="date-5">
                 <input type="description" id ="description">
                 <input type="pdf" id ="pdf">
                 <input type="balance" id ="balance">
             </tr>
             <tr class="register">
-                <input type="date" id ="date">
+                <input type="date" id ="date-6">
                 <input type="description" id ="description">
                 <input type="pdf" id ="pdf">
                 <input type="balance" id ="balance">
             </tr>
             <tr class="register">
-                <input type="date" id ="date">
+                <input type="date" id ="date-7">
                 <input type="description" id ="description">
                 <input type="pdf" id ="pdf">
                 <input type="balance" id ="balance">
             </tr>
             <tr class="register">
-                <input type="date" id ="date">
+                <input type="date" id ="date-8">
                 <input type="description" id ="description">
                 <input type="pdf" id ="pdf">
                 <input type="balance" id ="balance">
             </tr>
             <tr class="register">
-                <input type="date" id ="date">
+                <input type="date" id ="date-9">
                 <input type="description" id ="description">
                 <input type="pdf" id ="pdf">
                 <input type="balance" id ="balance">
@@ -225,15 +253,19 @@
 </div>
 
 <div class="flex-3">
-    <div class="box-3-details" id="box-3">
-        <div id="h2-margin">
+    <div class="box-3-details" id="boxxx-3">
+        <div class="h2-margin">
             <h2>Maximum Monthly House Payment</h2>
+            <i class="information-button">
+                <img src="img/info-button-real.png" alt="button with i inside">
+                <span class="info-content">The total amount one can afford to pay for his or her home based on his or her income.</span>
+            </i>
         </div>
-            <input type="GA" id ="HP" disabled>
+            <input id ="HP" disabled>
             <br>
             <div class="testing">
             <h2>Gross Monthly Income</h2>
-            <input type="GM" class="box" id="GM-2" disabled>
+            <input class="box" id="GM-2" disabled>
             <h2>x</h2>
             <h2>0.33</h2>
         </div>
@@ -245,18 +277,27 @@
 <footer>
     <div class="footer-1">
         <div class="class-50-1">
-        <img src="img/logo.png">
+        <img src="img/logo.png" alt="logo image with a briefcase and a silhouette of a person inside">
         </div>
         <div class="class-50-2">
         <h2>Careers In Calculation</h2>
     </div>
         <p> <br> 2555 Clovis Ave, Clovis, CA 93612</p>
         <p>(559)-248-7400</p>
-        <a href = "mailto: gabrielle.yeager@student.cart.org">gabrielle.yeager@student.cart.org</a>
+        <a href = "mailto:gabrielle.yeager@student.cart.org">gabrielle.yeager@student.cart.org</a>
     </div>
     <div class="footer-2">
-        <p>Income Calculator <br>
-            Check Register Calculator <br> <br> Our mission at Careers in Calculation is to empower young people to make informed financial decisions by providing comprehensive education and practical tools. We strive to instill financial literacy and understanding of personal finance through interactive income and checkbook calculators. Our goal is to equip the next generation with the skills and knowledge necessary to achieve financial stability and success in their careers.</p>
+        <p>
+            <!-- could add javascript for this to make it smoother instead of css/html -->
+            <a href="#incomefirst">
+                Income Calculator
+            </a> 
+            <br>
+            <a href="#checkfirst">
+                Check Register Calculator 
+            </a>
+            <br> 
+            <br> Our mission at Careers in Calculation is to empower young people to make informed financial decisions by providing comprehensive education and practical tools. We strive to instill financial literacy and understanding of personal finance through interactive income and checkbook calculators. Our goal is to equip the next generation with the skills and knowledge necessary to achieve financial stability and success in their careers. <br> <br> This project was created by Gabrielle Ruiz-Yeager at the Center for Advanced Research and Technology.</p>
     </div>
 </footer>
 <script src="script.js"></script>

@@ -72,6 +72,8 @@ const data = [
     [ 'Wind EnergyTechnician', 56700 ]
 ]
 
+// a big thank you and deserved credit to mr. fast for helping fix my silly little code, colby for getting me started and creating the first function, and paofue for just explaining javascript in a silly little way
+
 let JobInput = document.getElementById("jobinput");
 let JobList = document.getElementById('career');
 for(job of data){
