@@ -237,6 +237,7 @@ function SetNetMonthly() {
 
 
 
+
 //     let a = document.getElementById("FT").value;
 //     let b = document.getElementById("ST").value;
 //     // let c = +a + +b;
