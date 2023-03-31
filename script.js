@@ -262,3 +262,24 @@ function SetNetMonthly() {
 //     currentBalance = GMI - PDF.value;
 //     Balance = "$" + currentBalance;
 //     }
+
+// let totalMoney = NetMonthly;
+
+// let m = document.getElementById('balance');
+// let b = document.getElementById('pdf');
+//     m.innerHTML = totalMoney;
+//     b.innerHTML = totalMoney;
+
+
+// for (let i = 0; i < 9; i++) {   
+//     let n = getElementById('balance-' + i);
+//     for (let x = 0; x < 9; x++) {
+//         let j = document.getElementById('pdf' + x);
+//         if (x === 1) {
+//             n.innerHTML = j + totalMoney;
+//         }
+//         else if (x > 1 && x < 9){
+//             n.innerHTML = j + n;
+//         }
+//     }
+// }
